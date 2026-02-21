@@ -1711,7 +1711,7 @@ h2.section {
   }
 
   .slide {
-    padding: 20px 16px 100px;
+    padding: 20px 16px 120px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -1721,7 +1721,7 @@ h2.section {
   }
 
   #s1 {
-    padding: 28px 20px 100px;
+    padding: 28px 20px 120px;
   }
 
   .top-bar {
@@ -1734,6 +1734,7 @@ h2.section {
   .split-layout {
     flex-direction: column;
     gap: 24px;
+    flex: initial;
   }
 
   .split-primary,
@@ -1745,6 +1746,10 @@ h2.section {
   .flex-14 {
     flex: none;
     width: 100%;
+  }
+
+  .items-center {
+    align-items: stretch;
   }
 
   /* Navigation */
@@ -1803,6 +1808,10 @@ h2.section {
   }
 
   /* S5 Pillars */
+  .s5-wrapper {
+    flex: initial;
+  }
+
   .pillar-tabs {
     overflow-x: auto;
     flex-wrap: nowrap;
@@ -1870,11 +1879,11 @@ h2.section {
 
 @media (max-width: 480px) {
   .slide {
-    padding: 16px 12px 100px;
+    padding: 16px 12px 120px;
   }
 
   #s1 {
-    padding: 20px 16px 100px;
+    padding: 20px 16px 120px;
   }
 
   .ocean-thought {
