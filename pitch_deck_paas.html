@@ -72,7 +72,8 @@ body {
   transition: opacity .5s cubic-bezier(.4, 0, .2, 1),
               transform .5s cubic-bezier(.4, 0, .2, 1);
   pointer-events: none;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .slide.active {
@@ -1711,7 +1712,8 @@ h2.section {
   }
 
   .slide {
-    padding: 20px 16px 90px;
+    padding: 20px 16px 20px;
+    overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -1720,17 +1722,15 @@ h2.section {
     overflow-y: auto;
   }
 
-  /* Extra scroll space at the bottom of every slide so content can be scrolled above the nav */
-  .slide::after {
-    content: '';
-    display: block;
+  /* Real spacer div injected by JS at the bottom of each slide */
+  .slide-spacer {
     flex-shrink: 0;
-    min-height: 80px;
+    min-height: 100px;
     width: 100%;
   }
 
   #s1 {
-    padding: 28px 20px 90px;
+    padding: 28px 20px 20px;
   }
 
   .top-bar {
@@ -1888,11 +1888,11 @@ h2.section {
 
 @media (max-width: 480px) {
   .slide {
-    padding: 16px 12px 90px;
+    padding: 16px 12px 16px;
   }
 
   #s1 {
-    padding: 20px 16px 90px;
+    padding: 20px 16px 16px;
   }
 
   .ocean-thought {
@@ -2983,6 +2983,16 @@ function onEnter(i) {
 /* ═══ Init ═══ */
 
 progBar.style.width = (1 / N * 100) + '%';
+
+/* Inject spacer divs at the bottom of each slide for mobile nav clearance */
+if (window.innerWidth <= 768) {
+  SLIDES.forEach(function(slide) {
+    var spacer = document.createElement('div');
+    spacer.className = 'slide-spacer';
+    spacer.setAttribute('aria-hidden', 'true');
+    slide.appendChild(spacer);
+  });
+}
 
 (function() {
   var u = 'contato', d = 'synclab.help';
