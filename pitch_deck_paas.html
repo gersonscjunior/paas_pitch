@@ -1711,7 +1711,7 @@ h2.section {
   }
 
   .slide {
-    padding: 20px 16px 120px;
+    padding: 20px 16px 24px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -1720,8 +1720,16 @@ h2.section {
     overflow-y: auto;
   }
 
+  /* Invisible spacer at the bottom of every slide so you can scroll content above the nav */
+  .slide::after {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    height: 80px;
+  }
+
   #s1 {
-    padding: 28px 20px 120px;
+    padding: 28px 20px 24px;
   }
 
   .top-bar {
@@ -1879,11 +1887,11 @@ h2.section {
 
 @media (max-width: 480px) {
   .slide {
-    padding: 16px 12px 120px;
+    padding: 16px 12px 20px;
   }
 
   #s1 {
-    padding: 20px 16px 120px;
+    padding: 20px 16px 20px;
   }
 
   .ocean-thought {
