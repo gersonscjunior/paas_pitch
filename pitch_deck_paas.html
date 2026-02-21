@@ -1711,7 +1711,7 @@ h2.section {
   }
 
   .slide {
-    padding: 20px 16px 24px;
+    padding: 20px 16px 90px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -1720,16 +1720,17 @@ h2.section {
     overflow-y: auto;
   }
 
-  /* Invisible spacer at the bottom of every slide so you can scroll content above the nav */
+  /* Extra scroll space at the bottom of every slide so content can be scrolled above the nav */
   .slide::after {
     content: '';
     display: block;
     flex-shrink: 0;
-    height: 80px;
+    min-height: 80px;
+    width: 100%;
   }
 
   #s1 {
-    padding: 28px 20px 24px;
+    padding: 28px 20px 90px;
   }
 
   .top-bar {
@@ -1887,11 +1888,11 @@ h2.section {
 
 @media (max-width: 480px) {
   .slide {
-    padding: 16px 12px 20px;
+    padding: 16px 12px 90px;
   }
 
   #s1 {
-    padding: 20px 16px 20px;
+    padding: 20px 16px 90px;
   }
 
   .ocean-thought {
@@ -2275,6 +2276,10 @@ h2.section {
         <span class="mono-label">Stack técnico</span>
         <div class="tools-row">
           <span class="tool-chip">PYTHON</span>
+          <span class="tool-chip">AI / MACHINE LEARNING</span>
+          <span class="tool-chip">PESQUISA OPERACIONAL</span>
+          <span class="tool-chip">ENG. ECONÔMICA</span>
+          <span class="tool-chip">STATISTICS</span>
           <span class="tool-chip">EXCEL AVANÇADO</span>
           <span class="tool-chip">ARENA SIMULATION</span>
           <span class="tool-chip">DASHBOARDS BI</span>
