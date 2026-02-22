@@ -1673,6 +1673,11 @@ h2.section {
   background: var(--line);
 }
 
+/* Hidden on desktop, shown on mobile via media query */
+.mobile-end-spacer {
+  display: none;
+}
+
 /* ═══ Responsive: Tablet (max-width: 1024px) ═══ */
 
 @media (max-width: 1024px) {
@@ -1712,22 +1717,21 @@ h2.section {
   }
 
   .slide {
-    padding: 20px 16px 120px;
+    padding: 20px 16px 20px;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-  .slide::after {
-    content: '';
-    display: block;
-    flex-shrink: 0;
-    min-height: 80px;
-    width: 100%;
+  #s1 {
+    padding: 28px 20px 20px;
   }
 
-  #s1 {
-    padding: 28px 20px 120px;
+  .mobile-end-spacer {
+    display: block;
+    flex-shrink: 0;
+    height: 90px;
+    width: 100%;
   }
 
   .top-bar {
@@ -1885,11 +1889,11 @@ h2.section {
 
 @media (max-width: 480px) {
   .slide {
-    padding: 16px 12px 120px;
+    padding: 16px 12px 20px;
   }
 
   #s1 {
-    padding: 20px 16px 120px;
+    padding: 20px 16px 20px;
   }
 
   .ocean-thought {
@@ -1999,6 +2003,7 @@ h2.section {
     <div class="ocean-reveal-line"></div>
     <div class="ocean-reveal-text">continue →</div>
   </div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 <!-- ═══════════ S2: Pain Sliders ═══════════ -->
@@ -2088,6 +2093,7 @@ h2.section {
       </div>
     </div>
   </div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 <!-- ═══════════ S-Wish: Selection ═══════════ -->
@@ -2129,6 +2135,7 @@ h2.section {
       </div>
     </div>
   </div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 <!-- ═══════════ S-Pain: Auto-Cinematic ═══════════ -->
@@ -2164,6 +2171,7 @@ h2.section {
       </div>
     </div>
   </div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 <!-- ═══════════ S5: Pillar Tabs ═══════════ -->
@@ -2253,6 +2261,7 @@ h2.section {
       </div>
     </div>
   </div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 <!-- ═══════════ S6: Auto-Timeline ═══════════ -->
@@ -2320,6 +2329,7 @@ h2.section {
       </div>
     </div>
   </div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 <!-- ═══════════ S7: Flip Cards ═══════════ -->
@@ -2407,6 +2417,7 @@ h2.section {
       </div>
     </div>
   </div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 <!-- ═══════════ S8: Quiz ═══════════ -->
@@ -2464,6 +2475,7 @@ h2.section {
       </div>
     </div>
   </div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 <!-- ═══════════ S9: ROI + CTA ═══════════ -->
@@ -2549,6 +2561,7 @@ h2.section {
     </div>
   </div>
   <div class="tag-line-bottom">Synclab · Partner as a Service · Brasília · 2026</div>
+<div class="mobile-end-spacer" aria-hidden="true"></div>
 </section>
 
 </main>
