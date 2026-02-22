@@ -1711,22 +1711,16 @@ h2.section {
     touch-action: manipulation;
   }
 
+  /* Shrink deck so slides never go behind the fixed nav */
+  #deck {
+    height: calc(100% - 76px);
+  }
+
   .slide {
     padding: 20px 16px 20px;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-  }
-
-  .slide.active {
-    overflow-y: auto;
-  }
-
-  /* Real spacer div injected by JS at the bottom of each slide */
-  .slide-spacer {
-    flex-shrink: 0;
-    min-height: 100px;
-    width: 100%;
   }
 
   #s1 {
@@ -2983,16 +2977,6 @@ function onEnter(i) {
 /* ═══ Init ═══ */
 
 progBar.style.width = (1 / N * 100) + '%';
-
-/* Inject spacer divs at the bottom of each slide for mobile nav clearance */
-if (window.innerWidth <= 768) {
-  SLIDES.forEach(function(slide) {
-    var spacer = document.createElement('div');
-    spacer.className = 'slide-spacer';
-    spacer.setAttribute('aria-hidden', 'true');
-    slide.appendChild(spacer);
-  });
-}
 
 (function() {
   var u = 'contato', d = 'synclab.help';
