@@ -1,0 +1,24 @@
+{
+  "name": "Synclab — Partner as a Service",
+  "short_name": "Synclab",
+  "description": "Engenharia de produção aplicada ao seu negócio",
+  "start_url": "./pitch_deck_paas.html",
+  "display": "standalone",
+  "background_color": "#f4f0e6",
+  "theme_color": "#f4f0e6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
